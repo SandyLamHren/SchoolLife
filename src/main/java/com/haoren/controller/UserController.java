@@ -61,9 +61,7 @@ public class UserController {
         JSONObject object = new JSONObject();
         int code = userService.isYanDaPeople(real_name, user_number);
         if (code == MyConstant.USER_NOT_REGISTER) {
-            // TODO: 2017/3/26  注册
             int result = userService.updateUserInfo(real_name, pwd, user_number);
-
             if (result == 1) {
                 object.put("code", 1);
                 object.put("msg", "注册成功");

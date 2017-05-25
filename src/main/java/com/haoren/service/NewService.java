@@ -14,5 +14,5 @@ public interface NewService {
      * 查询新闻列表
      */
 
-    ArrayList<NewsBean> selectNews(int type);
+    ArrayList<NewsBean> selectNews(int type, int page);
 }

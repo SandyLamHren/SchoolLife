@@ -23,10 +23,10 @@ public class NewsController {
     NewService newService;
 
     @RequestMapping("getNewsList")
-    public void getNewList(HttpServletResponse response, int type) {
+    public void getNewList(HttpServletResponse response, int type,int page) {
         JSONObject object = new JSONObject();
         if (0 <= type && type <= 3) {
-            ArrayList<NewsBean> datas = newService.selectNews(type);
+            ArrayList<NewsBean> datas = newService.selectNews(type,page);
             object.put("code", 1);
             object.put("msg", "查询成功");
             object.put("data",datas);

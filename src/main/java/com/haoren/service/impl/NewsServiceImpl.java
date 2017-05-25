@@ -18,7 +18,7 @@ public class NewsServiceImpl implements NewService{
     NewsDao newsDao;
 
     @Override
-    public ArrayList<NewsBean> selectNews(int type) {
-        return newsDao.selectNewsList(type);
+    public ArrayList<NewsBean> selectNews(int type, int page) {
+        return newsDao.selectNewsList(type,page*10);
     }
 }

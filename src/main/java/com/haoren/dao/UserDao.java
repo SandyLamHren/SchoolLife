@@ -28,7 +28,7 @@ public interface UserDao {
     @Select("select * from user where user_number = #{1} and real_name= #{0}")
     UserBean isYanDaPeople(String real_name,String user_number);
     @Update("UPDATE user SET real_name =#{0} , pwd =#{1} WHERE user_number=#{2}")
-     int updateUserInfo(String real_name,String pwd,String user_number);
+    int updateUserInfo(String real_name,String pwd,String user_number);
 
 
 }

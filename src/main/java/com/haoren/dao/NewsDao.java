@@ -14,8 +14,7 @@ public interface NewsDao {
      * 查询新闻列表
      * @return
      */
-
-    @Select("select * from news where type = #{0}")
-    ArrayList<NewsBean> selectNewsList(int type);
+    @Select("select * from news where type = #{0} limit #{1} ")
+    ArrayList<NewsBean> selectNewsList(int type, int count);
 
 }
